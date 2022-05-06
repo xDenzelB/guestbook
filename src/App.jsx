@@ -1,7 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
 import Auth from './views/Auth';
-import Home from './views/Home';
-import Dashboard from './views/Dashboard';
+import EntryList from './views/EntryList';
 import PrivateRoute from './components/PrivateRoute';
 import { UserProvider } from './context/UserContext';
 export default function App() {
@@ -11,12 +10,9 @@ export default function App() {
       <Route path='/login'>
         <Auth />
       </Route>
-      <PrivateRoute path='/dashboard'>
-        <Dashboard />
+      <PrivateRoute path='/'>
+        <EntryList />
       </PrivateRoute>
-      <Route path='/'>
-        <Home />
-      </Route>
       </Switch>
       </UserProvider>
   )

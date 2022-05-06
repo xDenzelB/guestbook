@@ -9,6 +9,30 @@ export default function Auth() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  function signingUp() {
+    setEmail('');
+    setPassword('');
+    setSignup((prevState) => !prevState);
+  };
+
+  async function handleSubmit(e) {
+    setError('');
+    try {
+      e.preventDefault();
+      const response = signUp
+        ? await signUpUser({ email, password })
+        : await signInUser({ email, password });
+      
+      setUser({ id: response.id, email: response.id });
+      history.push('/');
+    } catch (error) {
+      setError(error.message);
+    }
+  };
+
+  if (user.email) return <Redirect to='/' />
+
   return (
     <div>Auth</div>
   )
