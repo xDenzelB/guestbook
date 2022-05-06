@@ -13,6 +13,16 @@ export default function EntryForm({ onAddEntry }) {
     setContent('');
   };
   return (
-    <div>EntryForm</div>
+    <div>
+      <form onSubmit={handleAddingEntry}>
+        <textarea 
+          id='content'
+          name='content'
+          required
+          value={content}
+          onChange={({ target }) => setContent(target.value)} />
+        <button type='submit' >Add Entry</button>
+      </form>
+    </div>
   )
 }
