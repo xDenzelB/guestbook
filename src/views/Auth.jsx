@@ -34,6 +34,20 @@ export default function Auth() {
   if (user.email) return <Redirect to='/' />
 
   return (
-    <div>Auth</div>
+    <div>
+      <div>
+      <h2>
+        {signUp ? 'Create an Account!' : 'Sign n to your Account!'}
+      </h2>
+      <p>Or</p>
+      <a onClick={signingUp}>
+        {' '}
+        {signUp ? 'Sign into your Account!' : 'Create and Account!'}
+      </a>
+      </div>
+      <form onSubmit={handleSubmit}>
+        
+      </form>
+    </div>
   )
 }
