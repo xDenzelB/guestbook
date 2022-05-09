@@ -12,7 +12,7 @@ const token = {
     "id": "123456",
     "aud": "authenticated",
     "role": "authenticated",
-    "email": "test@user.com",
+    "email": "testing@user.com",
     "email_confirmed_at": "2022-05-09T18:51:50.670032Z",
     "phone": "",
     "confirmed_at": "2022-05-09T18:51:50.670032Z",
@@ -46,13 +46,13 @@ const entriesData = [
   {
     "id": 310,
     "guest_id": "b88222c7-bb90-427a-800c-5f848ead1f8e",
-    "content": "Post #2",
+    "content": "Hello",
     "created_at": "2022-05-06T23:33:45.910957+00:00"
   },
   {
     "id": 500,
     "guest_id": "b88222c7-bb90-427a-800c-5f848ead1f8e",
-    "content": "Hello World",
+    "content": "testing",
     "created_at": "2022-05-06T23:33:40.391909+00:00"
   }
 ];
