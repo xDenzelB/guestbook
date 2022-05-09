@@ -37,16 +37,41 @@ export default function Auth() {
     <div>
       <div>
       <h2>
-        {signUp ? 'Create an Account!' : 'Sign n to your Account!'}
+        {signUp ? 'Create an Account!' : 'Sign in to your Account!'}
       </h2>
       <p>Or</p>
-      <a onClick={signingUp}>
+      <a href='#' onClick={signingUp}>
         {' '}
         {signUp ? 'Sign into your Account!' : 'Create and Account!'}
       </a>
       </div>
       <form onSubmit={handleSubmit}>
-        
+        <label htmlFor='email-address'>
+          Email
+        </label>
+        <input
+          name='email'
+          type='email'
+          required
+          placeholder='Email Address'
+          value={email}
+          onChange={({ target }) => setEmail(target.value)}
+        />
+        <label htmlFor='password'>
+          Password
+        </label>
+        <input 
+          name='password'
+          type='password'
+          required
+          placeholder='Password'
+          value={password}
+          onChange={({ target }) => setPassword(target.value)}
+        />
+        <button type='submit'>
+          {signUp ? 'Create account' : 'Sign in'}
+        </button>
+
       </form>
     </div>
   )
