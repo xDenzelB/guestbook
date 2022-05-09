@@ -39,4 +39,4 @@ export function useUser() {
     throw new Error('useUser needs to be used with UserProvider');
   }
   return context;
-}
+};

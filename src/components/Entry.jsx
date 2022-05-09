@@ -1,4 +1,3 @@
-import React from 'react'
 
 export default function Entry({ author, content, date }) {
   return (
@@ -6,8 +5,8 @@ export default function Entry({ author, content, date }) {
       <p>{content}</p>
       <div>
         <p>{author}</p>
-        <p>{new Date(date.toLocaleString('en-US'))}</p>
+        <p>{String(new Date(date.toLocaleString('en-US')))}</p>
       </div>
     </div>
-  )
+  );
 }
